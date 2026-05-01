@@ -1,3 +1,4 @@
+import 'package:fitnessapp/controllers/plan_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -15,14 +16,16 @@ class FitnessApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [ChangeNotifierProvider(create: (_) => MainTabController())],
+      providers: [
+        ChangeNotifierProvider(create: (_) => MainTabController()),
+        ChangeNotifierProvider(create: (_) => PlanController()),
+      ],
       child: MaterialApp(
         title: 'Fitness App',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           useMaterial3: true,
           scaffoldBackgroundColor: AppColors.background,
-          fontFamily: 'SF Pro Display',
         ),
         home: const MainScreen(),
       ),
