@@ -69,6 +69,40 @@ class PlanController extends ChangeNotifier {
     notifyListeners();
   }
 
+  void moveWorkout({
+    required WorkoutEntry workout,
+    required DateTime targetDate,
+  }) {
+    final fromDate = _normalize(workout.date);
+    final toDate = _normalize(targetDate);
+
+    if (fromDate == toDate) return;
+
+    final oldList = _workoutsByDate[fromDate];
+
+    if (oldList == null) return;
+
+    oldList.removeWhere((item) => item.id == workout.id);
+
+    if (oldList.isEmpty) {
+      _workoutsByDate.remove(fromDate);
+    }
+
+    final movedWorkout = workout.copyWith(date: toDate);
+
+    _workoutsByDate.putIfAbsent(toDate, () => []);
+    _workoutsByDate[toDate]!.add(movedWorkout);
+
+    notifyListeners();
+  }
+
+  bool canMoveWorkout({
+    required WorkoutEntry workout,
+    required DateTime targetDate,
+  }) {
+    return _normalize(workout.date) != _normalize(targetDate);
+  }
+
   void deleteWorkout(String id) {
     for (final workouts in _workoutsByDate.values) {
       workouts.removeWhere((item) => item.id == id);
@@ -121,12 +155,12 @@ class PlanController extends ChangeNotifier {
     final seedDate = today;
 
     void addSeed(
-        int offsetDays,
-        String title,
-        WorkoutType type,
-        int minDuration,
-        int maxDuration,
-        ) {
+      int offsetDays,
+      String title,
+      WorkoutType type,
+      int minDuration,
+      int maxDuration,
+    ) {
       addWorkout(
         date: seedDate.add(Duration(days: offsetDays)),
         title: title,

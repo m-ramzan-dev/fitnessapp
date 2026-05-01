@@ -15,7 +15,7 @@ class Header extends StatelessWidget {
               'Training Calendar',
               style: TextStyle(
                 fontSize: 22,
-                fontWeight: FontWeight.w800,
+                fontWeight: FontWeight.w600,
                 letterSpacing: -0.4,
                 color: AppColors.textPrimary,
               ),
