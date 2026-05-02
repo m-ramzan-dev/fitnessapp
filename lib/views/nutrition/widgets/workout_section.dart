@@ -1,3 +1,4 @@
+import 'package:fitnessapp/views/nutrition/widgets/live_day_night_icon.dart';
 import 'package:flutter/material.dart';
 
 import '../../../models/workout_entry.dart';
@@ -26,11 +27,7 @@ class WorkoutSection extends StatelessWidget {
               ),
             ),
             Spacer(),
-            Icon(
-              Icons.wb_sunny_rounded,
-              color: AppColors.textPrimary,
-              size: 22,
-            ),
+            LiveDayNightIcon(),
             SizedBox(width: 10),
             Text(
               '9°',

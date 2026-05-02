@@ -30,6 +30,7 @@ class FitnessApp extends StatelessWidget {
         theme: ThemeData(
           useMaterial3: true,
           scaffoldBackgroundColor: AppColors.background,
+          fontFamily: "Mulish",
         ),
         home: const MainScreen(),
       ),
