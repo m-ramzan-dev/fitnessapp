@@ -21,8 +21,8 @@ class WorkoutSection extends StatelessWidget {
               'Workouts',
               style: TextStyle(
                 color: AppColors.textPrimary,
-                fontSize: 25,
-                fontWeight: FontWeight.w500,
+                fontSize: 24,
+                fontWeight: FontWeight.w600,
                 letterSpacing: -0.5,
               ),
             ),
@@ -33,14 +33,14 @@ class WorkoutSection extends StatelessWidget {
               '9°',
               style: TextStyle(
                 color: AppColors.textPrimary,
-                fontSize: 23,
+                fontSize: 24,
                 fontWeight: FontWeight.w500,
                 letterSpacing: -0.2,
               ),
             ),
           ],
         ),
-        const SizedBox(height: 24),
+        const SizedBox(height: 16),
         if (workouts.isEmpty)
           const _EmptyWorkoutCard()
         else

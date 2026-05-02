@@ -4,8 +4,9 @@ import 'package:provider/provider.dart';
 import '../../../controllers/nutrition_controller.dart';
 import '../../../utils/app_colors.dart';
 import 'hydration_card.dart';
+
 class InsightGrid extends StatelessWidget {
-  const InsightGrid();
+  const InsightGrid({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -49,13 +50,13 @@ class _CaloriesCard extends StatelessWidget {
                 '${nutrition.calories}',
                 style: const TextStyle(
                   color: AppColors.textPrimary,
-                  fontSize: 41,
-                  fontWeight: FontWeight.w500,
+                  fontSize: 40,
+                  fontWeight: FontWeight.w600,
                   height: 1,
                   letterSpacing: -1.2,
                 ),
               ),
-              const SizedBox(width: 1),
+              const SizedBox(width: 2),
               const Padding(
                 padding: EdgeInsets.only(bottom: 4),
                 child: Text(
@@ -63,7 +64,7 @@ class _CaloriesCard extends StatelessWidget {
                   style: TextStyle(
                     color: AppColors.textPrimary,
                     fontSize: 18,
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w700,
                     letterSpacing: -0.5,
                   ),
                 ),
@@ -85,10 +86,7 @@ class _CaloriesCard extends StatelessWidget {
             children: [
               const Text(
                 '0',
-                style: TextStyle(
-                  color: AppColors.textSecondary,
-                  fontSize: 14,
-                ),
+                style: TextStyle(color: AppColors.textSecondary, fontSize: 14),
               ),
               Text(
                 '${nutrition.calorieGoal}',
@@ -114,6 +112,7 @@ class _CaloriesCard extends StatelessWidget {
     );
   }
 }
+
 class _WeightCard extends StatelessWidget {
   const _WeightCard();
 
@@ -138,7 +137,7 @@ class _WeightCard extends StatelessWidget {
                 nutrition.weightKg.toStringAsFixed(0),
                 style: const TextStyle(
                   color: AppColors.textPrimary,
-                  fontSize: 41,
+                  fontSize: 40,
                   fontWeight: FontWeight.w700,
                   height: 1,
                   letterSpacing: -1.2,
@@ -152,7 +151,7 @@ class _WeightCard extends StatelessWidget {
                   style: TextStyle(
                     color: AppColors.textPrimary,
                     fontSize: 18,
-                    fontWeight: FontWeight.w500,
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
               ),

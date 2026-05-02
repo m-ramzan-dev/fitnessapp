@@ -29,10 +29,10 @@ class NutritionPage extends StatelessWidget {
         bottom: false,
         child: ListView(
           physics: const BouncingScrollPhysics(),
-          padding: const EdgeInsets.fromLTRB(16, 14, 16, 14),
+          padding: const EdgeInsets.fromLTRB(16, 0, 16, 14),
           children: [
             const NutritionTopRow(),
-            const SizedBox(height: 34),
+            const SizedBox(height: 16),
             WeekHeader(
               selectedDate: nutrition.selectedDate,
               weekStart: weekStart,
@@ -41,11 +41,11 @@ class NutritionPage extends StatelessWidget {
             ),
             const SizedBox(height: 12),
             const SmallWeekIndicator(),
-            const SizedBox(height: 28),
+            const SizedBox(height: 12),
             WorkoutSection(workouts: workouts),
-            const SizedBox(height: 30),
+            const SizedBox(height: 8),
             const InsightsTitle(),
-            const SizedBox(height: 24),
+            const SizedBox(height: 16),
             const InsightGrid(),
           ],
         ),

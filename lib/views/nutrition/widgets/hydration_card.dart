@@ -34,8 +34,8 @@ class HydrationCard extends StatelessWidget {
                             '${(nutrition.hydrationProgress * 100).round()}%',
                             style: const TextStyle(
                               color: Color(0xFF58B7FF),
-                              fontSize: 41,
-                              fontWeight: FontWeight.w500,
+                              fontSize: 40,
+                              fontWeight: FontWeight.w600,
                               height: 1,
                               letterSpacing: -1.4,
                             ),

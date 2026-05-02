@@ -11,7 +11,7 @@ class WeekSeparator extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 2,
-      margin: const EdgeInsets.only(top: 20),
+      margin: const EdgeInsets.only(top: 12),
       decoration: BoxDecoration(
         color: color ?? AppColors.legs,
         border: Border.symmetric(

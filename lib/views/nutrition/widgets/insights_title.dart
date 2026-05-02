@@ -15,8 +15,8 @@ class InsightsTitle extends StatelessWidget {
         'My Insights',
         style: TextStyle(
           color: AppColors.textPrimary,
-          fontSize: 25,
-          fontWeight: FontWeight.w500,
+          fontSize: 24,
+          fontWeight: FontWeight.w600,
           letterSpacing: -0.5,
         ),
       ),

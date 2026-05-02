@@ -31,12 +31,12 @@ class MoodScreen extends StatelessWidget {
                     'Mood',
                     style: TextStyle(
                       color: AppColors.textPrimary,
-                      fontSize: 31,
+                      fontSize: 32,
                       fontWeight: FontWeight.w400,
                       letterSpacing: -0.7,
                     ),
                   ),
-                  const SizedBox(height: 28),
+                  const SizedBox(height: 16),
                   const Padding(
                     padding: EdgeInsets.only(left: 16),
                     child: Text(
@@ -56,8 +56,8 @@ class MoodScreen extends StatelessWidget {
                       'How are you feeling at the\nMoment?',
                       style: TextStyle(
                         color: AppColors.textPrimary,
-                        fontSize: 25,
-                        fontWeight: FontWeight.w500,
+                        fontSize: 24,
+                        fontWeight: FontWeight.w600,
                         height: 1.17,
                         letterSpacing: -0.5,
                       ),

@@ -50,7 +50,7 @@ class WeekHeader extends StatelessWidget {
           style: const TextStyle(
             color: AppColors.textPrimary,
             fontSize: 16,
-            fontWeight: FontWeight.w800,
+            fontWeight: FontWeight.w700,
             letterSpacing: -0.2,
           ),
         ),
