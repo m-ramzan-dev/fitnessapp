@@ -1,4 +1,3 @@
-
 import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
@@ -64,30 +63,16 @@ extension MoodTypeX on MoodType {
     }
   }
 
-  Color get faceColor {
+  String get faceAsset {
     switch (this) {
       case MoodType.calm:
-        return const Color(0xFFECC6B8);
+        return 'assets/icons/mood/mood_calm.svg';
       case MoodType.content:
-        return const Color(0xFFF7D34D);
+        return 'assets/icons/mood/mood_content.svg';
       case MoodType.happy:
-        return const Color(0xFFFFC884);
+        return 'assets/icons/mood/mood_happy.svg';
       case MoodType.peaceful:
-        return const Color(0xFFFFC884);
-    }
-  }
-
-  Color get accentColor {
-    switch (this) {
-      case MoodType.calm:
-        return const Color(0xFF8ACEC4);
-      case MoodType.content:
-        return const Color(0xFFC8B7F2);
-      case MoodType.happy:
-        return const Color(0xFFFF9A58);
-      case MoodType.peaceful:
-        return const Color(0xFFF47FA9);
+        return 'assets/icons/mood/mood_peaceful.svg';
     }
   }
 }
-
