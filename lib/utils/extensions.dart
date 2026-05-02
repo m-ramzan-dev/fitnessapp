@@ -49,3 +49,45 @@ extension WorkoutTypeX on WorkoutType {
     }
   }
 }
+
+extension MoodTypeX on MoodType {
+  String get label {
+    switch (this) {
+      case MoodType.calm:
+        return 'Calm';
+      case MoodType.content:
+        return 'Content';
+      case MoodType.happy:
+        return 'Happy';
+      case MoodType.peaceful:
+        return 'Peaceful';
+    }
+  }
+
+  Color get faceColor {
+    switch (this) {
+      case MoodType.calm:
+        return const Color(0xFFECC6B8);
+      case MoodType.content:
+        return const Color(0xFFF7D34D);
+      case MoodType.happy:
+        return const Color(0xFFFFC884);
+      case MoodType.peaceful:
+        return const Color(0xFFFFC884);
+    }
+  }
+
+  Color get accentColor {
+    switch (this) {
+      case MoodType.calm:
+        return const Color(0xFF8ACEC4);
+      case MoodType.content:
+        return const Color(0xFFC8B7F2);
+      case MoodType.happy:
+        return const Color(0xFFFF9A58);
+      case MoodType.peaceful:
+        return const Color(0xFFF47FA9);
+    }
+  }
+}
+

@@ -29,7 +29,7 @@ class NutritionPage extends StatelessWidget {
         bottom: false,
         child: ListView(
           physics: const BouncingScrollPhysics(),
-          padding: const EdgeInsets.fromLTRB(16, 14, 16, 24),
+          padding: const EdgeInsets.fromLTRB(16, 14, 16, 14),
           children: [
             const NutritionTopRow(),
             const SizedBox(height: 34),

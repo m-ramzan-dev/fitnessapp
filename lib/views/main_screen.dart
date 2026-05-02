@@ -1,3 +1,4 @@
+import 'package:fitnessapp/views/mood/mood_screen.dart';
 import 'package:fitnessapp/views/nutrition/nutrition_screen.dart';
 import 'package:fitnessapp/views/plan/plan_screen.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +14,7 @@ class MainScreen extends StatelessWidget {
   static const List<Widget> _pages = [
     NutritionPage(),
     PlanScreen(),
-    _PlaceholderScreen(title: 'Mood'),
+    MoodScreen(),
     _PlaceholderScreen(title: 'Profile'),
   ];
 
