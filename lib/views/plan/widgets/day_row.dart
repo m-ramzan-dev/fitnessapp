@@ -113,7 +113,8 @@ class DayRow extends StatelessWidget {
                             child: Text(
                               isDragHovering
                                   ? 'Drop workout here'
-                                  : '+ Add workout',
+                                  //: '+ Add workout',
+                                  : '',
                               style: const TextStyle(
                                 fontSize: 11,
                                 fontStyle: FontStyle.italic,
@@ -135,33 +136,36 @@ class DayRow extends StatelessWidget {
                               ),
                             ),
                           ),
-                          GestureDetector(
-                            onTap: onAdd,
-                            child: Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 2),
-                              child: Row(
-                                children: [
-                                  Icon(
-                                    isDragHovering
-                                        ? Icons.move_down_rounded
-                                        : Icons.add,
-                                    size: 14,
-                                    color: AppColors.textMuted,
-                                  ),
-                                  const SizedBox(width: 4),
-                                  Text(
-                                    isDragHovering
-                                        ? 'Drop workout here'
-                                        : 'Add workout',
-                                    style: const TextStyle(
-                                      fontSize: 11,
+                          if (isDragHovering)
+                            GestureDetector(
+                              onTap: onAdd,
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(
+                                  vertical: 2,
+                                ),
+                                child: Row(
+                                  children: [
+                                    Icon(
+                                      isDragHovering
+                                          ? Icons.move_down_rounded
+                                          : Icons.add,
+                                      size: 14,
                                       color: AppColors.textMuted,
                                     ),
-                                  ),
-                                ],
+                                    const SizedBox(width: 4),
+                                    Text(
+                                      isDragHovering
+                                          ? 'Drop workout here'
+                                          : 'Add workout',
+                                      style: const TextStyle(
+                                        fontSize: 11,
+                                        color: AppColors.textMuted,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
-                          ),
                         ],
                       ),
               ),

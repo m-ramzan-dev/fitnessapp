@@ -1,3 +1,4 @@
+import 'package:fitnessapp/controllers/nutrition_controller.dart';
 import 'package:fitnessapp/controllers/plan_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -19,6 +20,7 @@ class FitnessApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => MainTabController()),
         ChangeNotifierProvider(create: (_) => PlanController()),
+        ChangeNotifierProvider(create: (_) => NutritionController())
       ],
       child: MaterialApp(
         title: 'Fitness App',

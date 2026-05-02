@@ -1,3 +1,4 @@
+import 'package:fitnessapp/views/nutrition/nutrition_screen.dart';
 import 'package:fitnessapp/views/plan/plan_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -10,7 +11,7 @@ class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
 
   static const List<Widget> _pages = [
-    _PlaceholderScreen(title: 'Nutrition'),
+    NutritionPage(),
     PlanScreen(),
     _PlaceholderScreen(title: 'Mood'),
     _PlaceholderScreen(title: 'Profile'),
@@ -22,10 +23,7 @@ class MainScreen extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: AppColors.background,
-      body: IndexedStack(
-        index: tabController.currentIndex,
-        children: _pages,
-      ),
+      body: IndexedStack(index: tabController.currentIndex, children: _pages),
       bottomNavigationBar: AppBottomNav(
         currentIndex: tabController.currentIndex,
         onTap: tabController.changeTab,
@@ -37,9 +35,7 @@ class MainScreen extends StatelessWidget {
 class _PlaceholderScreen extends StatelessWidget {
   final String title;
 
-  const _PlaceholderScreen({
-    required this.title,
-  });
+  const _PlaceholderScreen({required this.title});
 
   @override
   Widget build(BuildContext context) {
